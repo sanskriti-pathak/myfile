@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+        font-family:'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #2a3439, #36454f);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 50px;
+        }
+        h1 {
+            color: #ff0066;
+            font-size: 60px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+        }
+        p {
+            font-size: 22px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .cake {
+            width: 250px;
+            height: auto;
+            margin-top: 20px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .video-section {
+            margin-top: 20px;
+        }
+        .video {
+            display: none;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .btn {
+            background-color:burlywood;
+            color: black;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color:darksalmon;
+        }
+    </style>
+    <script>
+        function showVideo() {
+            document.getElementById('birthdayVideo').style.display = 'block';
+            document.getElementById('videoButton').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Happy Birthday, Anshika! ❤️🎂</h1>
+        <img class="cake" src="pic.jpg" alt="Birthday Cake">
+        <p>Wishing you a day filled with love, joy, and all your favorite things. May this year bring you happiness and success! 🎁✨</p>
+        <div class="video-section">
+            <button id="videoButton" class="btn" onclick="showVideo()"> Click Here to see a cutie ❤️🎥</button>
+            <div id="birthdayVideo" class="video">
+                <video width="500" controls>
+                    <source src="vid.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
